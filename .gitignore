@@ -1,0 +1,12 @@
+data/raw/*
+data/prepared/*
+models/
+build/
+pg/
+ext/
+__pycache__/
+*.pyc
+!data/raw/.gitkeep
+!data/prepared/.gitkeep
+
+results/*.bak

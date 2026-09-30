@@ -1,0 +1,7 @@
+numpy>=1.24
+pandas>=2.0
+psycopg2-binary>=2.9
+matplotlib>=3.7
+onnxruntime>=1.17
+tokenizers>=0.15
+pyarrow>=12.0
