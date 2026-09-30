@@ -1,0 +1,933 @@
+experiment,table,rows,index,query,param,run,seconds,result_rows,extra
+search,docs_small,300,none,fts_high,,1,0.074108,27,Aggregate;Seq Scan
+search,docs_small,300,none,fts_high,,2,0.073897,27,
+search,docs_small,300,none,fts_high,,3,0.076762,27,
+search,docs_small,300,none,fts_high,,4,0.077149,27,
+search,docs_small,300,none,fts_high,,5,0.076223,27,
+search,docs_small,300,none,fts_mid,,1,0.068704,2,Aggregate;Seq Scan
+search,docs_small,300,none,fts_mid,,2,0.076607,2,
+search,docs_small,300,none,fts_mid,,3,0.073104,2,
+search,docs_small,300,none,fts_mid,,4,0.0719,2,
+search,docs_small,300,none,fts_mid,,5,0.071082,2,
+search,docs_small,300,none,fts_low,,1,0.072409,0,Aggregate;Seq Scan
+search,docs_small,300,none,fts_low,,2,0.07237,0,
+search,docs_small,300,none,fts_low,,3,0.075236,0,
+search,docs_small,300,none,fts_low,,4,0.060106,0,
+search,docs_small,300,none,fts_low,,5,0.059571,0,
+search,docs_small,300,none,fts_conj,,1,0.062681,0,Aggregate;Seq Scan
+search,docs_small,300,none,fts_conj,,2,0.056471,0,
+search,docs_small,300,none,fts_conj,,3,0.064827,0,
+search,docs_small,300,none,fts_conj,,4,0.063856,0,
+search,docs_small,300,none,fts_conj,,5,0.062007,0,
+search,docs_small,300,none,fts_phrase,,1,0.064834,30,Aggregate;Seq Scan
+search,docs_small,300,none,fts_phrase,,2,0.063386,30,
+search,docs_small,300,none,fts_phrase,,3,0.064547,30,
+search,docs_small,300,none,fts_phrase,,4,0.065098,30,
+search,docs_small,300,none,fts_phrase,,5,0.056958,30,
+search,docs_small,300,none,fts_rank_top10,,1,0.06099,2,Limit;Sort;Seq Scan
+search,docs_small,300,none,fts_rank_top10,,2,0.0608,2,
+search,docs_small,300,none,fts_rank_top10,,3,0.067301,2,
+search,docs_small,300,none,fts_rank_top10,,4,0.060961,2,
+search,docs_small,300,none,fts_rank_top10,,5,0.065879,2,
+search,docs_small,300,none,fts_rum_dist_top10,,1,0.070862,2,Limit;Sort;Seq Scan
+search,docs_small,300,none,fts_rum_dist_top10,,2,0.056648,2,
+search,docs_small,300,none,fts_rum_dist_top10,,3,0.061714,2,
+search,docs_small,300,none,fts_rum_dist_top10,,4,0.067,2,
+search,docs_small,300,none,fts_rum_dist_top10,,5,0.063301,2,
+search,docs_small,300,none,trgm_like_common,,1,0.00153,3,Aggregate;Seq Scan
+search,docs_small,300,none,trgm_like_common,,2,0.00131,3,
+search,docs_small,300,none,trgm_like_common,,3,0.001351,3,
+search,docs_small,300,none,trgm_like_common,,4,0.001291,3,
+search,docs_small,300,none,trgm_like_common,,5,0.002375,3,
+search,docs_small,300,none,trgm_like_rare,,1,0.002157,0,Aggregate;Seq Scan
+search,docs_small,300,none,trgm_like_rare,,2,0.001794,0,
+search,docs_small,300,none,trgm_like_rare,,3,0.001742,0,
+search,docs_small,300,none,trgm_like_rare,,4,0.001741,0,
+search,docs_small,300,none,trgm_like_rare,,5,0.001647,0,
+search,docs_small,300,none,trgm_wordsim,,1,0.060017,24,Aggregate;Seq Scan
+search,docs_small,300,none,trgm_wordsim,,2,0.064763,24,
+search,docs_small,300,none,trgm_wordsim,,3,0.060139,24,
+search,docs_small,300,none,trgm_wordsim,,4,0.066611,24,
+search,docs_small,300,none,trgm_wordsim,,5,0.059026,24,
+search,docs_small,300,none,trgm_typo_top10,,1,0.059571,0,Limit;Sort;Seq Scan
+search,docs_small,300,none,trgm_typo_top10,,2,0.062453,0,
+search,docs_small,300,none,trgm_typo_top10,,3,0.067854,0,
+search,docs_small,300,none,trgm_typo_top10,,4,0.058985,0,
+search,docs_small,300,none,trgm_typo_top10,,5,0.06367,0,
+insert,docs_small,300,none,,,1,0.207,1000,
+insert,docs_small,300,none,,,2,0.0823,1000,
+insert,docs_small,300,none,,,3,0.0629,1000,
+insert,docs_small,300,none,,,4,0.0745,1000,
+insert,docs_small,300,none,,,5,0.066,1000,
+build,docs_small,300,fts_gin,,,1,0.1536,,434176
+build,docs_small,300,fts_gin,,,2,0.1258,,434176
+build,docs_small,300,fts_gin,,,3,0.1278,,434176
+build,docs_small,300,fts_gin,,,4,0.1292,,434176
+build,docs_small,300,fts_gin,,,5,0.1302,,434176
+size,docs_small,300,fts_gin,,,1,0,434176,434176
+search,docs_small,300,fts_gin,fts_high,,1,0.000946,27,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_small_fts_gin
+search,docs_small,300,fts_gin,fts_high,,2,0.000699,27,
+search,docs_small,300,fts_gin,fts_high,,3,0.000747,27,
+search,docs_small,300,fts_gin,fts_high,,4,0.000884,27,
+search,docs_small,300,fts_gin,fts_high,,5,0.000907,27,
+search,docs_small,300,fts_gin,fts_mid,,1,0.000875,2,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_small_fts_gin
+search,docs_small,300,fts_gin,fts_mid,,2,0.00069,2,
+search,docs_small,300,fts_gin,fts_mid,,3,0.000707,2,
+search,docs_small,300,fts_gin,fts_mid,,4,0.001635,2,
+search,docs_small,300,fts_gin,fts_mid,,5,0.001796,2,
+search,docs_small,300,fts_gin,fts_low,,1,0.001178,0,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_small_fts_gin
+search,docs_small,300,fts_gin,fts_low,,2,0.000782,0,
+search,docs_small,300,fts_gin,fts_low,,3,0.00115,0,
+search,docs_small,300,fts_gin,fts_low,,4,0.000789,0,
+search,docs_small,300,fts_gin,fts_low,,5,0.000742,0,
+search,docs_small,300,fts_gin,fts_conj,,1,0.001006,0,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_small_fts_gin
+search,docs_small,300,fts_gin,fts_conj,,2,0.001289,0,
+search,docs_small,300,fts_gin,fts_conj,,3,0.001185,0,
+search,docs_small,300,fts_gin,fts_conj,,4,0.00095,0,
+search,docs_small,300,fts_gin,fts_conj,,5,0.000785,0,
+search,docs_small,300,fts_gin,fts_phrase,,1,0.011452,30,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_small_fts_gin
+search,docs_small,300,fts_gin,fts_phrase,,2,0.011932,30,
+search,docs_small,300,fts_gin,fts_phrase,,3,0.009694,30,
+search,docs_small,300,fts_gin,fts_phrase,,4,0.011807,30,
+search,docs_small,300,fts_gin,fts_phrase,,5,0.012281,30,
+search,docs_small,300,fts_gin,fts_rank_top10,,1,0.001623,2,Limit;Sort;Bitmap Heap Scan;Bitmap Index Scan:docs_small_fts_gin
+search,docs_small,300,fts_gin,fts_rank_top10,,2,0.00162,2,
+search,docs_small,300,fts_gin,fts_rank_top10,,3,0.001628,2,
+search,docs_small,300,fts_gin,fts_rank_top10,,4,0.003261,2,
+search,docs_small,300,fts_gin,fts_rank_top10,,5,0.002109,2,
+insert,docs_small,300,fts_gin,,,1,0.3503,1000,
+insert,docs_small,300,fts_gin,,,2,0.3134,1000,
+insert,docs_small,300,fts_gin,,,3,0.3485,1000,
+insert,docs_small,300,fts_gin,,,4,0.3063,1000,
+insert,docs_small,300,fts_gin,,,5,0.3055,1000,
+build,docs_small,300,fts_gist,,,1,0.0939,,81920
+build,docs_small,300,fts_gist,,,2,0.0878,,81920
+build,docs_small,300,fts_gist,,,3,0.0993,,81920
+build,docs_small,300,fts_gist,,,4,0.0915,,81920
+build,docs_small,300,fts_gist,,,5,0.1055,,81920
+size,docs_small,300,fts_gist,,,1,0,81920,81920
+search,docs_small,300,fts_gist,fts_high,,1,0.01842,27,Aggregate;Index Scan:docs_small_fts_gist
+search,docs_small,300,fts_gist,fts_high,,2,0.018946,27,
+search,docs_small,300,fts_gist,fts_high,,3,0.018765,27,
+search,docs_small,300,fts_gist,fts_high,,4,0.020098,27,
+search,docs_small,300,fts_gist,fts_high,,5,0.015312,27,
+search,docs_small,300,fts_gist,fts_mid,,1,0.002353,2,Aggregate;Index Scan:docs_small_fts_gist
+search,docs_small,300,fts_gist,fts_mid,,2,0.002045,2,
+search,docs_small,300,fts_gist,fts_mid,,3,0.002147,2,
+search,docs_small,300,fts_gist,fts_mid,,4,0.002258,2,
+search,docs_small,300,fts_gist,fts_mid,,5,0.002142,2,
+search,docs_small,300,fts_gist,fts_low,,1,0.006547,0,Aggregate;Index Scan:docs_small_fts_gist
+search,docs_small,300,fts_gist,fts_low,,2,0.006129,0,
+search,docs_small,300,fts_gist,fts_low,,3,0.005671,0,
+search,docs_small,300,fts_gist,fts_low,,4,0.00688,0,
+search,docs_small,300,fts_gist,fts_low,,5,0.005973,0,
+search,docs_small,300,fts_gist,fts_conj,,1,0.001802,0,Aggregate;Index Scan:docs_small_fts_gist
+search,docs_small,300,fts_gist,fts_conj,,2,0.002163,0,
+search,docs_small,300,fts_gist,fts_conj,,3,0.001532,0,
+search,docs_small,300,fts_gist,fts_conj,,4,0.001554,0,
+search,docs_small,300,fts_gist,fts_conj,,5,0.00136,0,
+search,docs_small,300,fts_gist,fts_phrase,,1,0.011811,30,Aggregate;Index Scan:docs_small_fts_gist
+search,docs_small,300,fts_gist,fts_phrase,,2,0.010473,30,
+search,docs_small,300,fts_gist,fts_phrase,,3,0.008868,30,
+search,docs_small,300,fts_gist,fts_phrase,,4,0.009835,30,
+search,docs_small,300,fts_gist,fts_phrase,,5,0.008528,30,
+search,docs_small,300,fts_gist,fts_rank_top10,,1,0.002229,2,Limit;Sort;Index Scan:docs_small_fts_gist
+search,docs_small,300,fts_gist,fts_rank_top10,,2,0.002001,2,
+search,docs_small,300,fts_gist,fts_rank_top10,,3,0.002592,2,
+search,docs_small,300,fts_gist,fts_rank_top10,,4,0.002634,2,
+search,docs_small,300,fts_gist,fts_rank_top10,,5,0.003637,2,
+insert,docs_small,300,fts_gist,,,1,0.3553,1000,
+insert,docs_small,300,fts_gist,,,2,0.3946,1000,
+insert,docs_small,300,fts_gist,,,3,0.3997,1000,
+insert,docs_small,300,fts_gist,,,4,0.4011,1000,
+insert,docs_small,300,fts_gist,,,5,0.4486,1000,
+build,docs_small,300,fts_rum,,,1,0.1602,,573440
+build,docs_small,300,fts_rum,,,2,0.1165,,573440
+build,docs_small,300,fts_rum,,,3,0.1459,,573440
+build,docs_small,300,fts_rum,,,4,0.113,,573440
+build,docs_small,300,fts_rum,,,5,0.1369,,573440
+size,docs_small,300,fts_rum,,,1,0,573440,573440
+search,docs_small,300,fts_rum,fts_high,,1,0.001295,27,Aggregate;Index Scan:docs_small_fts_rum
+search,docs_small,300,fts_rum,fts_high,,2,0.001173,27,
+search,docs_small,300,fts_rum,fts_high,,3,0.001107,27,
+search,docs_small,300,fts_rum,fts_high,,4,0.001229,27,
+search,docs_small,300,fts_rum,fts_high,,5,0.001042,27,
+search,docs_small,300,fts_rum,fts_mid,,1,0.000953,2,Aggregate;Index Scan:docs_small_fts_rum
+search,docs_small,300,fts_rum,fts_mid,,2,0.000866,2,
+search,docs_small,300,fts_rum,fts_mid,,3,0.000834,2,
+search,docs_small,300,fts_rum,fts_mid,,4,0.002184,2,
+search,docs_small,300,fts_rum,fts_mid,,5,0.001161,2,
+search,docs_small,300,fts_rum,fts_low,,1,0.001006,0,Aggregate;Index Scan:docs_small_fts_rum
+search,docs_small,300,fts_rum,fts_low,,2,0.000925,0,
+search,docs_small,300,fts_rum,fts_low,,3,0.001048,0,
+search,docs_small,300,fts_rum,fts_low,,4,0.001089,0,
+search,docs_small,300,fts_rum,fts_low,,5,0.00106,0,
+search,docs_small,300,fts_rum,fts_conj,,1,0.001638,0,Aggregate;Index Scan:docs_small_fts_rum
+search,docs_small,300,fts_rum,fts_conj,,2,0.001281,0,
+search,docs_small,300,fts_rum,fts_conj,,3,0.001118,0,
+search,docs_small,300,fts_rum,fts_conj,,4,0.001021,0,
+search,docs_small,300,fts_rum,fts_conj,,5,0.000963,0,
+search,docs_small,300,fts_rum,fts_phrase,,1,0.001218,30,Aggregate;Index Scan:docs_small_fts_rum
+search,docs_small,300,fts_rum,fts_phrase,,2,0.001028,30,
+search,docs_small,300,fts_rum,fts_phrase,,3,0.000746,30,
+search,docs_small,300,fts_rum,fts_phrase,,4,0.000752,30,
+search,docs_small,300,fts_rum,fts_phrase,,5,0.000934,30,
+search,docs_small,300,fts_rum,fts_rank_top10,,1,0.001753,2,Limit;Sort;Index Scan:docs_small_fts_rum
+search,docs_small,300,fts_rum,fts_rank_top10,,2,0.001509,2,
+search,docs_small,300,fts_rum,fts_rank_top10,,3,0.001426,2,
+search,docs_small,300,fts_rum,fts_rank_top10,,4,0.001175,2,
+search,docs_small,300,fts_rum,fts_rank_top10,,5,0.001287,2,
+search,docs_small,300,fts_rum,fts_rum_dist_top10,,1,0.002958,2,Limit;Index Scan:docs_small_fts_rum
+search,docs_small,300,fts_rum,fts_rum_dist_top10,,2,0.001854,2,
+search,docs_small,300,fts_rum,fts_rum_dist_top10,,3,0.001577,2,
+search,docs_small,300,fts_rum,fts_rum_dist_top10,,4,0.00152,2,
+search,docs_small,300,fts_rum,fts_rum_dist_top10,,5,0.001421,2,
+insert,docs_small,300,fts_rum,,,1,1.3329,1000,
+insert,docs_small,300,fts_rum,,,2,1.7179,1000,
+insert,docs_small,300,fts_rum,,,3,1.689,1000,
+insert,docs_small,300,fts_rum,,,4,1.5159,1000,
+insert,docs_small,300,fts_rum,,,5,1.5214,1000,
+build,docs_small,300,trgm_gin,,,1,0.1189,,598016
+build,docs_small,300,trgm_gin,,,2,0.1129,,598016
+build,docs_small,300,trgm_gin,,,3,0.1131,,598016
+build,docs_small,300,trgm_gin,,,4,0.1055,,598016
+build,docs_small,300,trgm_gin,,,5,0.127,,598016
+size,docs_small,300,trgm_gin,,,1,0,598016,598016
+search,docs_small,300,trgm_gin,trgm_like_common,,1,0.001066,3,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_small_trgm_gin
+search,docs_small,300,trgm_gin,trgm_like_common,,2,0.000875,3,
+search,docs_small,300,trgm_gin,trgm_like_common,,3,0.000926,3,
+search,docs_small,300,trgm_gin,trgm_like_common,,4,0.000816,3,
+search,docs_small,300,trgm_gin,trgm_like_common,,5,0.001101,3,
+search,docs_small,300,trgm_gin,trgm_like_rare,,1,0.001474,0,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_small_trgm_gin
+search,docs_small,300,trgm_gin,trgm_like_rare,,2,0.001021,0,
+search,docs_small,300,trgm_gin,trgm_like_rare,,3,0.000836,0,
+search,docs_small,300,trgm_gin,trgm_like_rare,,4,0.000695,0,
+search,docs_small,300,trgm_gin,trgm_like_rare,,5,0.000672,0,
+search,docs_small,300,trgm_gin,trgm_wordsim,,1,0.016584,24,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_small_trgm_gin
+search,docs_small,300,trgm_gin,trgm_wordsim,,2,0.017999,24,
+search,docs_small,300,trgm_gin,trgm_wordsim,,3,0.019172,24,
+search,docs_small,300,trgm_gin,trgm_wordsim,,4,0.016422,24,
+search,docs_small,300,trgm_gin,trgm_wordsim,,5,0.018093,24,
+search,docs_small,300,trgm_gin,trgm_typo_top10,,1,0.02862,0,Limit;Sort;Bitmap Heap Scan;Bitmap Index Scan:docs_small_trgm_gin
+search,docs_small,300,trgm_gin,trgm_typo_top10,,2,0.021754,0,
+search,docs_small,300,trgm_gin,trgm_typo_top10,,3,0.025181,0,
+search,docs_small,300,trgm_gin,trgm_typo_top10,,4,0.022079,0,
+search,docs_small,300,trgm_gin,trgm_typo_top10,,5,0.022553,0,
+insert,docs_small,300,trgm_gin,,,1,0.4577,1000,
+insert,docs_small,300,trgm_gin,,,2,0.4071,1000,
+insert,docs_small,300,trgm_gin,,,3,0.3795,1000,
+insert,docs_small,300,trgm_gin,,,4,0.3945,1000,
+insert,docs_small,300,trgm_gin,,,5,0.401,1000,
+build,docs_small,300,trgm_gist,,,1,0.1061,,1318912
+build,docs_small,300,trgm_gist,,,2,0.0917,,1146880
+build,docs_small,300,trgm_gist,,,3,0.1008,,1302528
+build,docs_small,300,trgm_gist,,,4,0.0974,,1302528
+build,docs_small,300,trgm_gist,,,5,0.0941,,1433600
+size,docs_small,300,trgm_gist,,,1,0,1433600,1433600
+search,docs_small,300,trgm_gist,trgm_like_common,,1,0.001734,3,Aggregate;Index Scan:docs_small_trgm_gist
+search,docs_small,300,trgm_gist,trgm_like_common,,2,0.001414,3,
+search,docs_small,300,trgm_gist,trgm_like_common,,3,0.001456,3,
+search,docs_small,300,trgm_gist,trgm_like_common,,4,0.001387,3,
+search,docs_small,300,trgm_gist,trgm_like_common,,5,0.001373,3,
+search,docs_small,300,trgm_gist,trgm_like_rare,,1,0.002285,0,Aggregate;Index Scan:docs_small_trgm_gist
+search,docs_small,300,trgm_gist,trgm_like_rare,,2,0.001764,0,
+search,docs_small,300,trgm_gist,trgm_like_rare,,3,0.001585,0,
+search,docs_small,300,trgm_gist,trgm_like_rare,,4,0.001374,0,
+search,docs_small,300,trgm_gist,trgm_like_rare,,5,0.001358,0,
+search,docs_small,300,trgm_gist,trgm_wordsim,,1,0.020794,24,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_small_trgm_gist
+search,docs_small,300,trgm_gist,trgm_wordsim,,2,0.018314,24,
+search,docs_small,300,trgm_gist,trgm_wordsim,,3,0.019296,24,
+search,docs_small,300,trgm_gist,trgm_wordsim,,4,0.016665,24,
+search,docs_small,300,trgm_gist,trgm_wordsim,,5,0.020155,24,
+search,docs_small,300,trgm_gist,trgm_typo_top10,,1,0.022237,0,Limit;Index Scan:docs_small_trgm_gist
+search,docs_small,300,trgm_gist,trgm_typo_top10,,2,0.026834,0,
+search,docs_small,300,trgm_gist,trgm_typo_top10,,3,0.023777,0,
+search,docs_small,300,trgm_gist,trgm_typo_top10,,4,0.025265,0,
+search,docs_small,300,trgm_gist,trgm_typo_top10,,5,0.024711,0,
+insert,docs_small,300,trgm_gist,,,1,0.342,1000,
+insert,docs_small,300,trgm_gist,,,2,0.3193,1000,
+insert,docs_small,300,trgm_gist,,,3,0.3128,1000,
+insert,docs_small,300,trgm_gist,,,4,0.2805,1000,
+insert,docs_small,300,trgm_gist,,,5,0.2593,1000,
+build,docs_small,300,vec_hnsw,,,1,0.0995,,622592
+build,docs_small,300,vec_hnsw,,,2,0.0929,,622592
+build,docs_small,300,vec_hnsw,,,3,0.0904,,622592
+build,docs_small,300,vec_hnsw,,,4,0.0923,,622592
+build,docs_small,300,vec_hnsw,,,5,0.0962,,622592
+size,docs_small,300,vec_hnsw,,,1,0,622592,622592
+insert,docs_small,300,vec_hnsw,,,1,2.8934,1000,
+insert,docs_small,300,vec_hnsw,,,2,2.7557,1000,
+insert,docs_small,300,vec_hnsw,,,3,2.8011,1000,
+insert,docs_small,300,vec_hnsw,,,4,2.8935,1000,
+insert,docs_small,300,vec_hnsw,,,5,2.7804,1000,
+build,docs_small,300,vec_ivfflat,,,1,0.0375,,548864
+build,docs_small,300,vec_ivfflat,,,2,0.0288,,540672
+build,docs_small,300,vec_ivfflat,,,3,0.0312,,540672
+build,docs_small,300,vec_ivfflat,,,4,0.0287,,548864
+build,docs_small,300,vec_ivfflat,,,5,0.0259,,557056
+size,docs_small,300,vec_ivfflat,,,1,0,557056,557056
+insert,docs_small,300,vec_ivfflat,,,1,0.083,1000,
+insert,docs_small,300,vec_ivfflat,,,2,0.083,1000,
+insert,docs_small,300,vec_ivfflat,,,3,0.0814,1000,
+insert,docs_small,300,vec_ivfflat,,,4,0.0872,1000,
+insert,docs_small,300,vec_ivfflat,,,5,0.0836,1000,
+build,docs_small,300,fts_gin_nofu,,,1,0.1205,,434176
+build,docs_small,300,fts_gin_nofu,,,2,0.1081,,434176
+build,docs_small,300,fts_gin_nofu,,,3,0.1011,,434176
+build,docs_small,300,fts_gin_nofu,,,4,0.1169,,434176
+build,docs_small,300,fts_gin_nofu,,,5,0.1091,,434176
+size,docs_small,300,fts_gin_nofu,,,1,0,434176,434176
+insert,docs_small,300,fts_gin_nofu,,,1,0.5625,1000,
+insert,docs_small,300,fts_gin_nofu,,,2,0.595,1000,
+insert,docs_small,300,fts_gin_nofu,,,3,0.5719,1000,
+insert,docs_small,300,fts_gin_nofu,,,4,0.5756,1000,
+insert,docs_small,300,fts_gin_nofu,,,5,0.6084,1000,
+search,docs_medium,30000,none,fts_high,,1,2.606863,2972,Aggregate;Gather;Aggregate;Seq Scan
+search,docs_medium,30000,none,fts_high,,2,2.528005,2972,
+search,docs_medium,30000,none,fts_high,,3,2.579536,2972,
+search,docs_medium,30000,none,fts_high,,4,2.562516,2972,
+search,docs_medium,30000,none,fts_high,,5,2.499237,2972,
+search,docs_medium,30000,none,fts_mid,,1,2.453272,300,Aggregate;Gather;Aggregate;Seq Scan
+search,docs_medium,30000,none,fts_mid,,2,2.482286,300,
+search,docs_medium,30000,none,fts_mid,,3,2.51088,300,
+search,docs_medium,30000,none,fts_mid,,4,2.452868,300,
+search,docs_medium,30000,none,fts_mid,,5,2.486392,300,
+search,docs_medium,30000,none,fts_low,,1,2.449302,15,Aggregate;Gather;Aggregate;Seq Scan
+search,docs_medium,30000,none,fts_low,,2,2.483393,15,
+search,docs_medium,30000,none,fts_low,,3,2.470103,15,
+search,docs_medium,30000,none,fts_low,,4,2.443899,15,
+search,docs_medium,30000,none,fts_low,,5,2.39586,15,
+search,docs_medium,30000,none,fts_conj,,1,2.350236,42,Aggregate;Gather;Seq Scan
+search,docs_medium,30000,none,fts_conj,,2,2.342481,42,
+search,docs_medium,30000,none,fts_conj,,3,2.290845,42,
+search,docs_medium,30000,none,fts_conj,,4,2.30417,42,
+search,docs_medium,30000,none,fts_conj,,5,2.288359,42,
+search,docs_medium,30000,none,fts_phrase,,1,2.28809,2543,Aggregate;Gather;Seq Scan
+search,docs_medium,30000,none,fts_phrase,,2,2.396838,2543,
+search,docs_medium,30000,none,fts_phrase,,3,2.38051,2543,
+search,docs_medium,30000,none,fts_phrase,,4,2.340101,2543,
+search,docs_medium,30000,none,fts_phrase,,5,2.296669,2543,
+search,docs_medium,30000,none,fts_rank_top10,,1,2.343061,10,Limit;Gather Merge;Sort;Seq Scan
+search,docs_medium,30000,none,fts_rank_top10,,2,2.352684,10,
+search,docs_medium,30000,none,fts_rank_top10,,3,2.339086,10,
+search,docs_medium,30000,none,fts_rank_top10,,4,2.335798,10,
+search,docs_medium,30000,none,fts_rank_top10,,5,2.317529,10,
+search,docs_medium,30000,none,fts_rum_dist_top10,,1,5.468588,10,Limit;Sort;Seq Scan
+search,docs_medium,30000,none,fts_rum_dist_top10,,2,5.437478,10,
+search,docs_medium,30000,none,fts_rum_dist_top10,,3,5.434944,10,
+search,docs_medium,30000,none,fts_rum_dist_top10,,4,5.511332,10,
+search,docs_medium,30000,none,fts_rum_dist_top10,,5,5.429855,10,
+search,docs_medium,30000,none,trgm_like_common,,1,0.074272,263,Aggregate;Seq Scan
+search,docs_medium,30000,none,trgm_like_common,,2,0.075402,263,
+search,docs_medium,30000,none,trgm_like_common,,3,0.070004,263,
+search,docs_medium,30000,none,trgm_like_common,,4,0.080205,263,
+search,docs_medium,30000,none,trgm_like_common,,5,0.068483,263,
+search,docs_medium,30000,none,trgm_like_rare,,1,0.07432,1,Aggregate;Seq Scan
+search,docs_medium,30000,none,trgm_like_rare,,2,0.070541,1,
+search,docs_medium,30000,none,trgm_like_rare,,3,0.072432,1,
+search,docs_medium,30000,none,trgm_like_rare,,4,0.076462,1,
+search,docs_medium,30000,none,trgm_like_rare,,5,0.075402,1,
+search,docs_medium,30000,none,trgm_wordsim,,1,4.821496,2633,Aggregate;Seq Scan
+search,docs_medium,30000,none,trgm_wordsim,,2,4.814766,2633,
+search,docs_medium,30000,none,trgm_wordsim,,3,4.739086,2633,
+search,docs_medium,30000,none,trgm_wordsim,,4,4.712013,2633,
+search,docs_medium,30000,none,trgm_wordsim,,5,4.745864,2633,
+search,docs_medium,30000,none,trgm_typo_top10,,1,4.714805,10,Limit;Sort;Seq Scan
+search,docs_medium,30000,none,trgm_typo_top10,,2,4.769205,10,
+search,docs_medium,30000,none,trgm_typo_top10,,3,4.717882,10,
+search,docs_medium,30000,none,trgm_typo_top10,,4,4.684325,10,
+search,docs_medium,30000,none,trgm_typo_top10,,5,4.678896,10,
+search,docs_medium,30000,none,vec_knn10,,1,0.109661,10,recall@10=1.0000
+search,docs_medium,30000,none,vec_knn10,,2,0.106526,10,recall@10=1.0000
+search,docs_medium,30000,none,vec_knn10,,3,0.099721,10,recall@10=1.0000
+search,docs_medium,30000,none,vec_knn10,,4,0.097059,10,recall@10=1.0000
+search,docs_medium,30000,none,vec_knn10,,5,0.097797,10,recall@10=1.0000
+insert,docs_medium,30000,none,,,1,0.083,1000,
+insert,docs_medium,30000,none,,,2,0.0444,1000,
+insert,docs_medium,30000,none,,,3,0.0466,1000,
+insert,docs_medium,30000,none,,,4,0.0451,1000,
+insert,docs_medium,30000,none,,,5,0.0444,1000,
+build,docs_medium,30000,fts_gin,,,1,4.3298,,15368192
+build,docs_medium,30000,fts_gin,,,2,4.25,,15368192
+build,docs_medium,30000,fts_gin,,,3,4.2802,,15368192
+build,docs_medium,30000,fts_gin,,,4,4.3308,,15368192
+build,docs_medium,30000,fts_gin,,,5,4.2424,,15368192
+size,docs_medium,30000,fts_gin,,,1,0,15368192,15368192
+search,docs_medium,30000,fts_gin,fts_high,,1,0.004989,2972,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_medium_fts_gin
+search,docs_medium,30000,fts_gin,fts_high,,2,0.005939,2972,
+search,docs_medium,30000,fts_gin,fts_high,,3,0.004532,2972,
+search,docs_medium,30000,fts_gin,fts_high,,4,0.004296,2972,
+search,docs_medium,30000,fts_gin,fts_high,,5,0.004322,2972,
+search,docs_medium,30000,fts_gin,fts_mid,,1,0.001257,300,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_medium_fts_gin
+search,docs_medium,30000,fts_gin,fts_mid,,2,0.00108,300,
+search,docs_medium,30000,fts_gin,fts_mid,,3,0.001103,300,
+search,docs_medium,30000,fts_gin,fts_mid,,4,0.001093,300,
+search,docs_medium,30000,fts_gin,fts_mid,,5,0.001056,300,
+search,docs_medium,30000,fts_gin,fts_low,,1,0.000716,15,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_medium_fts_gin
+search,docs_medium,30000,fts_gin,fts_low,,2,0.00063,15,
+search,docs_medium,30000,fts_gin,fts_low,,3,0.000605,15,
+search,docs_medium,30000,fts_gin,fts_low,,4,0.000502,15,
+search,docs_medium,30000,fts_gin,fts_low,,5,0.000518,15,
+search,docs_medium,30000,fts_gin,fts_conj,,1,0.000895,42,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_medium_fts_gin
+search,docs_medium,30000,fts_gin,fts_conj,,2,0.000761,42,
+search,docs_medium,30000,fts_gin,fts_conj,,3,0.0007,42,
+search,docs_medium,30000,fts_gin,fts_conj,,4,0.000719,42,
+search,docs_medium,30000,fts_gin,fts_conj,,5,0.000696,42,
+search,docs_medium,30000,fts_gin,fts_phrase,,1,0.671981,2543,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_medium_fts_gin
+search,docs_medium,30000,fts_gin,fts_phrase,,2,0.694508,2543,
+search,docs_medium,30000,fts_gin,fts_phrase,,3,0.66676,2543,
+search,docs_medium,30000,fts_gin,fts_phrase,,4,0.690211,2543,
+search,docs_medium,30000,fts_gin,fts_phrase,,5,0.692806,2543,
+search,docs_medium,30000,fts_gin,fts_rank_top10,,1,0.115448,10,Limit;Sort;Bitmap Heap Scan;Bitmap Index Scan:docs_medium_fts_gin
+search,docs_medium,30000,fts_gin,fts_rank_top10,,2,0.104911,10,
+search,docs_medium,30000,fts_gin,fts_rank_top10,,3,0.119363,10,
+search,docs_medium,30000,fts_gin,fts_rank_top10,,4,0.123352,10,
+search,docs_medium,30000,fts_gin,fts_rank_top10,,5,0.102951,10,
+insert,docs_medium,30000,fts_gin,,,1,0.2998,1000,
+insert,docs_medium,30000,fts_gin,,,2,0.2764,1000,
+insert,docs_medium,30000,fts_gin,,,3,0.2493,1000,
+insert,docs_medium,30000,fts_gin,,,4,0.2421,1000,
+insert,docs_medium,30000,fts_gin,,,5,0.2398,1000,
+build,docs_medium,30000,fts_gist,,,1,6.921,,7667712
+build,docs_medium,30000,fts_gist,,,2,7.0254,,7577600
+build,docs_medium,30000,fts_gist,,,3,7.3388,,7684096
+build,docs_medium,30000,fts_gist,,,4,7.0381,,7610368
+build,docs_medium,30000,fts_gist,,,5,6.7961,,7610368
+size,docs_medium,30000,fts_gist,,,1,0,7610368,7610368
+search,docs_medium,30000,fts_gist,fts_high,,1,1.05739,2972,Aggregate;Index Scan:docs_medium_fts_gist
+search,docs_medium,30000,fts_gist,fts_high,,2,1.069113,2972,
+search,docs_medium,30000,fts_gist,fts_high,,3,1.086847,2972,
+search,docs_medium,30000,fts_gist,fts_high,,4,1.087639,2972,
+search,docs_medium,30000,fts_gist,fts_high,,5,1.058159,2972,
+search,docs_medium,30000,fts_gist,fts_mid,,1,0.219067,300,Aggregate;Index Scan:docs_medium_fts_gist
+search,docs_medium,30000,fts_gist,fts_mid,,2,0.220612,300,
+search,docs_medium,30000,fts_gist,fts_mid,,3,0.225477,300,
+search,docs_medium,30000,fts_gist,fts_mid,,4,0.227514,300,
+search,docs_medium,30000,fts_gist,fts_mid,,5,0.221245,300,
+search,docs_medium,30000,fts_gist,fts_low,,1,0.299249,15,Aggregate;Index Scan:docs_medium_fts_gist
+search,docs_medium,30000,fts_gist,fts_low,,2,0.310024,15,
+search,docs_medium,30000,fts_gist,fts_low,,3,0.30046,15,
+search,docs_medium,30000,fts_gist,fts_low,,4,0.284058,15,
+search,docs_medium,30000,fts_gist,fts_low,,5,0.292442,15,
+search,docs_medium,30000,fts_gist,fts_conj,,1,0.080286,42,Aggregate;Index Scan:docs_medium_fts_gist
+search,docs_medium,30000,fts_gist,fts_conj,,2,0.0729,42,
+search,docs_medium,30000,fts_gist,fts_conj,,3,0.077475,42,
+search,docs_medium,30000,fts_gist,fts_conj,,4,0.078277,42,
+search,docs_medium,30000,fts_gist,fts_conj,,5,0.08004,42,
+search,docs_medium,30000,fts_gist,fts_phrase,,1,0.726059,2543,Aggregate;Index Scan:docs_medium_fts_gist
+search,docs_medium,30000,fts_gist,fts_phrase,,2,0.730573,2543,
+search,docs_medium,30000,fts_gist,fts_phrase,,3,0.781231,2543,
+search,docs_medium,30000,fts_gist,fts_phrase,,4,0.744695,2543,
+search,docs_medium,30000,fts_gist,fts_phrase,,5,0.76077,2543,
+search,docs_medium,30000,fts_gist,fts_rank_top10,,1,0.330384,10,Limit;Sort;Index Scan:docs_medium_fts_gist
+search,docs_medium,30000,fts_gist,fts_rank_top10,,2,0.325991,10,
+search,docs_medium,30000,fts_gist,fts_rank_top10,,3,0.33756,10,
+search,docs_medium,30000,fts_gist,fts_rank_top10,,4,0.329619,10,
+search,docs_medium,30000,fts_gist,fts_rank_top10,,5,0.343483,10,
+insert,docs_medium,30000,fts_gist,,,1,0.289,1000,
+insert,docs_medium,30000,fts_gist,,,2,0.2824,1000,
+insert,docs_medium,30000,fts_gist,,,3,0.2703,1000,
+insert,docs_medium,30000,fts_gist,,,4,0.2897,1000,
+insert,docs_medium,30000,fts_gist,,,5,0.2832,1000,
+build,docs_medium,30000,fts_rum,,,1,9.5962,,25075712
+build,docs_medium,30000,fts_rum,,,2,9.715,,25075712
+build,docs_medium,30000,fts_rum,,,3,10.2815,,25075712
+build,docs_medium,30000,fts_rum,,,4,9.7036,,25075712
+build,docs_medium,30000,fts_rum,,,5,9.662,,25075712
+size,docs_medium,30000,fts_rum,,,1,0,25075712,25075712
+search,docs_medium,30000,fts_rum,fts_high,,1,0.02911,2972,Aggregate;Index Scan:docs_medium_fts_rum
+search,docs_medium,30000,fts_rum,fts_high,,2,0.026597,2972,
+search,docs_medium,30000,fts_rum,fts_high,,3,0.032409,2972,
+search,docs_medium,30000,fts_rum,fts_high,,4,0.031969,2972,
+search,docs_medium,30000,fts_rum,fts_high,,5,0.033115,2972,
+search,docs_medium,30000,fts_rum,fts_mid,,1,0.026616,300,Aggregate;Index Scan:docs_medium_fts_rum
+search,docs_medium,30000,fts_rum,fts_mid,,2,0.028381,300,
+search,docs_medium,30000,fts_rum,fts_mid,,3,0.025513,300,
+search,docs_medium,30000,fts_rum,fts_mid,,4,0.02904,300,
+search,docs_medium,30000,fts_rum,fts_mid,,5,0.028692,300,
+search,docs_medium,30000,fts_rum,fts_low,,1,0.017041,15,Aggregate;Index Scan:docs_medium_fts_rum
+search,docs_medium,30000,fts_rum,fts_low,,2,0.016132,15,
+search,docs_medium,30000,fts_rum,fts_low,,3,0.014847,15,
+search,docs_medium,30000,fts_rum,fts_low,,4,0.014407,15,
+search,docs_medium,30000,fts_rum,fts_low,,5,0.0166,15,
+search,docs_medium,30000,fts_rum,fts_conj,,1,0.014989,42,Aggregate;Index Scan:docs_medium_fts_rum
+search,docs_medium,30000,fts_rum,fts_conj,,2,0.016254,42,
+search,docs_medium,30000,fts_rum,fts_conj,,3,0.018507,42,
+search,docs_medium,30000,fts_rum,fts_conj,,4,0.016306,42,
+search,docs_medium,30000,fts_rum,fts_conj,,5,0.018082,42,
+search,docs_medium,30000,fts_rum,fts_phrase,,1,0.032252,2543,Aggregate;Index Scan:docs_medium_fts_rum
+search,docs_medium,30000,fts_rum,fts_phrase,,2,0.039903,2543,
+search,docs_medium,30000,fts_rum,fts_phrase,,3,0.03546,2543,
+search,docs_medium,30000,fts_rum,fts_phrase,,4,0.034618,2543,
+search,docs_medium,30000,fts_rum,fts_phrase,,5,0.032899,2543,
+search,docs_medium,30000,fts_rum,fts_rank_top10,,1,0.149337,10,Limit;Sort;Index Scan:docs_medium_fts_rum
+search,docs_medium,30000,fts_rum,fts_rank_top10,,2,0.151474,10,
+search,docs_medium,30000,fts_rum,fts_rank_top10,,3,0.156862,10,
+search,docs_medium,30000,fts_rum,fts_rank_top10,,4,0.151009,10,
+search,docs_medium,30000,fts_rum,fts_rank_top10,,5,0.152254,10,
+search,docs_medium,30000,fts_rum,fts_rum_dist_top10,,1,0.032934,10,Limit;Index Scan:docs_medium_fts_rum
+search,docs_medium,30000,fts_rum,fts_rum_dist_top10,,2,0.032588,10,
+search,docs_medium,30000,fts_rum,fts_rum_dist_top10,,3,0.030949,10,
+search,docs_medium,30000,fts_rum,fts_rum_dist_top10,,4,0.034916,10,
+search,docs_medium,30000,fts_rum,fts_rum_dist_top10,,5,0.031755,10,
+insert,docs_medium,30000,fts_rum,,,1,1.6545,1000,
+insert,docs_medium,30000,fts_rum,,,2,1.3381,1000,
+insert,docs_medium,30000,fts_rum,,,3,1.3157,1000,
+insert,docs_medium,30000,fts_rum,,,4,1.3216,1000,
+insert,docs_medium,30000,fts_rum,,,5,1.3529,1000,
+build,docs_medium,30000,trgm_gin,,,1,4.0948,,28491776
+build,docs_medium,30000,trgm_gin,,,2,3.9336,,28491776
+build,docs_medium,30000,trgm_gin,,,3,3.8759,,28491776
+build,docs_medium,30000,trgm_gin,,,4,3.882,,28491776
+build,docs_medium,30000,trgm_gin,,,5,3.8724,,28491776
+size,docs_medium,30000,trgm_gin,,,1,0,28491776,28491776
+search,docs_medium,30000,trgm_gin,trgm_like_common,,1,0.017908,263,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_medium_trgm_gin
+search,docs_medium,30000,trgm_gin,trgm_like_common,,2,0.015093,263,
+search,docs_medium,30000,trgm_gin,trgm_like_common,,3,0.015039,263,
+search,docs_medium,30000,trgm_gin,trgm_like_common,,4,0.01622,263,
+search,docs_medium,30000,trgm_gin,trgm_like_common,,5,0.015525,263,
+search,docs_medium,30000,trgm_gin,trgm_like_rare,,1,0.002112,1,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_medium_trgm_gin
+search,docs_medium,30000,trgm_gin,trgm_like_rare,,2,0.002727,1,
+search,docs_medium,30000,trgm_gin,trgm_like_rare,,3,0.002103,1,
+search,docs_medium,30000,trgm_gin,trgm_like_rare,,4,0.001891,1,
+search,docs_medium,30000,trgm_gin,trgm_like_rare,,5,0.00211,1,
+search,docs_medium,30000,trgm_gin,trgm_wordsim,,1,0.699169,2633,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_medium_trgm_gin
+search,docs_medium,30000,trgm_gin,trgm_wordsim,,2,0.685827,2633,
+search,docs_medium,30000,trgm_gin,trgm_wordsim,,3,0.699742,2633,
+search,docs_medium,30000,trgm_gin,trgm_wordsim,,4,0.658424,2633,
+search,docs_medium,30000,trgm_gin,trgm_wordsim,,5,0.713733,2633,
+search,docs_medium,30000,trgm_gin,trgm_typo_top10,,1,1.223296,10,Limit;Sort;Bitmap Heap Scan;Bitmap Index Scan:docs_medium_trgm_gin
+search,docs_medium,30000,trgm_gin,trgm_typo_top10,,2,1.197433,10,
+search,docs_medium,30000,trgm_gin,trgm_typo_top10,,3,1.172595,10,
+search,docs_medium,30000,trgm_gin,trgm_typo_top10,,4,1.174922,10,
+search,docs_medium,30000,trgm_gin,trgm_typo_top10,,5,1.171706,10,
+insert,docs_medium,30000,trgm_gin,,,1,0.5897,1000,
+insert,docs_medium,30000,trgm_gin,,,2,0.3438,1000,
+insert,docs_medium,30000,trgm_gin,,,3,0.3382,1000,
+insert,docs_medium,30000,trgm_gin,,,4,0.3238,1000,
+insert,docs_medium,30000,trgm_gin,,,5,0.403,1000,
+build,docs_medium,30000,trgm_gist,,,1,7.3913,,120070144
+build,docs_medium,30000,trgm_gist,,,2,7.4677,,120922112
+build,docs_medium,30000,trgm_gist,,,3,7.416,,121217024
+build,docs_medium,30000,trgm_gist,,,4,7.452,,122789888
+build,docs_medium,30000,trgm_gist,,,5,7.3766,,121266176
+size,docs_medium,30000,trgm_gist,,,1,0,121266176,121266176
+search,docs_medium,30000,trgm_gist,trgm_like_common,,1,0.0552,263,Aggregate;Index Scan:docs_medium_trgm_gist
+search,docs_medium,30000,trgm_gist,trgm_like_common,,2,0.056512,263,
+search,docs_medium,30000,trgm_gist,trgm_like_common,,3,0.055903,263,
+search,docs_medium,30000,trgm_gist,trgm_like_common,,4,0.054608,263,
+search,docs_medium,30000,trgm_gist,trgm_like_common,,5,0.053573,263,
+search,docs_medium,30000,trgm_gist,trgm_like_rare,,1,0.029097,1,Aggregate;Index Scan:docs_medium_trgm_gist
+search,docs_medium,30000,trgm_gist,trgm_like_rare,,2,0.026634,1,
+search,docs_medium,30000,trgm_gist,trgm_like_rare,,3,0.022711,1,
+search,docs_medium,30000,trgm_gist,trgm_like_rare,,4,0.025408,1,
+search,docs_medium,30000,trgm_gist,trgm_like_rare,,5,0.030428,1,
+search,docs_medium,30000,trgm_gist,trgm_wordsim,,1,0.703849,2633,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_medium_trgm_gist
+search,docs_medium,30000,trgm_gist,trgm_wordsim,,2,0.701845,2633,
+search,docs_medium,30000,trgm_gist,trgm_wordsim,,3,0.709411,2633,
+search,docs_medium,30000,trgm_gist,trgm_wordsim,,4,0.698837,2633,
+search,docs_medium,30000,trgm_gist,trgm_wordsim,,5,0.704942,2633,
+search,docs_medium,30000,trgm_gist,trgm_typo_top10,,1,0.283911,10,Limit;Index Scan:docs_medium_trgm_gist
+search,docs_medium,30000,trgm_gist,trgm_typo_top10,,2,0.281015,10,
+search,docs_medium,30000,trgm_gist,trgm_typo_top10,,3,0.273822,10,
+search,docs_medium,30000,trgm_gist,trgm_typo_top10,,4,0.279825,10,
+search,docs_medium,30000,trgm_gist,trgm_typo_top10,,5,0.287496,10,
+insert,docs_medium,30000,trgm_gist,,,1,0.2933,1000,
+insert,docs_medium,30000,trgm_gist,,,2,0.2515,1000,
+insert,docs_medium,30000,trgm_gist,,,3,0.2472,1000,
+insert,docs_medium,30000,trgm_gist,,,4,0.2317,1000,
+insert,docs_medium,30000,trgm_gist,,,5,0.2474,1000,
+build,docs_medium,30000,vec_hnsw,,,1,13.2873,,61431808
+build,docs_medium,30000,vec_hnsw,,,2,12.6273,,61431808
+build,docs_medium,30000,vec_hnsw,,,3,12.7848,,61431808
+build,docs_medium,30000,vec_hnsw,,,4,12.6234,,61431808
+build,docs_medium,30000,vec_hnsw,,,5,12.4998,,61431808
+size,docs_medium,30000,vec_hnsw,,,1,0,61431808,61431808
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=10,1,0.001524,10,recall@10=0.9050
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=10,2,0.001489,10,recall@10=0.9050
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=10,3,0.00146,10,recall@10=0.9050
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=10,4,0.001507,10,recall@10=0.9050
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=10,5,0.001422,10,recall@10=0.9050
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=40,1,0.001852,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=40,2,0.001858,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=40,3,0.001784,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=40,4,0.002124,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=40,5,0.002278,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=100,1,0.002922,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=100,2,0.00259,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=100,3,0.002447,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=100,4,0.002613,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=100,5,0.002987,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=200,1,0.00498,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=200,2,0.00426,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=200,3,0.004932,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=200,4,0.004279,10,recall@10=1.0000
+search,docs_medium,30000,vec_hnsw,vec_knn10,hnsw.ef_search=200,5,0.003884,10,recall@10=1.0000
+insert,docs_medium,30000,vec_hnsw,,,1,3.8888,1000,
+insert,docs_medium,30000,vec_hnsw,,,2,3.6245,1000,
+insert,docs_medium,30000,vec_hnsw,,,3,3.569,1000,
+insert,docs_medium,30000,vec_hnsw,,,4,3.7125,1000,
+insert,docs_medium,30000,vec_hnsw,,,5,3.6909,1000,
+build,docs_medium,30000,vec_ivfflat,,,1,1.4468,,49307648
+build,docs_medium,30000,vec_ivfflat,,,2,1.4008,,49307648
+build,docs_medium,30000,vec_ivfflat,,,3,1.5722,,49307648
+build,docs_medium,30000,vec_ivfflat,,,4,1.6737,,49274880
+build,docs_medium,30000,vec_ivfflat,,,5,1.4415,,49324032
+size,docs_medium,30000,vec_ivfflat,,,1,0,49324032,49324032
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=1,1,0.001705,10,recall@10=0.9000
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=1,2,0.001784,10,recall@10=0.9000
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=1,3,0.001838,10,recall@10=0.9000
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=1,4,0.001868,10,recall@10=0.9000
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=1,5,0.001741,10,recall@10=0.9000
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=5,1,0.005136,10,recall@10=0.9850
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=5,2,0.005229,10,recall@10=0.9850
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=5,3,0.005159,10,recall@10=0.9850
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=5,4,0.004793,10,recall@10=0.9850
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=5,5,0.00484,10,recall@10=0.9850
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=10,1,0.008462,10,recall@10=0.9950
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=10,2,0.008735,10,recall@10=0.9950
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=10,3,0.008722,10,recall@10=0.9950
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=10,4,0.008523,10,recall@10=0.9950
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=10,5,0.009018,10,recall@10=0.9950
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=20,1,0.016667,10,recall@10=1.0000
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=20,2,0.016014,10,recall@10=1.0000
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=20,3,0.017097,10,recall@10=1.0000
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=20,4,0.016677,10,recall@10=1.0000
+search,docs_medium,30000,vec_ivfflat,vec_knn10,ivfflat.probes=20,5,0.016757,10,recall@10=1.0000
+insert,docs_medium,30000,vec_ivfflat,,,1,0.0806,1000,
+insert,docs_medium,30000,vec_ivfflat,,,2,0.0625,1000,
+insert,docs_medium,30000,vec_ivfflat,,,3,0.0665,1000,
+insert,docs_medium,30000,vec_ivfflat,,,4,0.0647,1000,
+insert,docs_medium,30000,vec_ivfflat,,,5,0.0616,1000,
+build,docs_medium,30000,fts_gin_nofu,,,1,4.5595,,15368192
+build,docs_medium,30000,fts_gin_nofu,,,2,4.5492,,15368192
+build,docs_medium,30000,fts_gin_nofu,,,3,4.4402,,15368192
+build,docs_medium,30000,fts_gin_nofu,,,4,4.4105,,15368192
+build,docs_medium,30000,fts_gin_nofu,,,5,4.2862,,15368192
+size,docs_medium,30000,fts_gin_nofu,,,1,0,15368192,15368192
+insert,docs_medium,30000,fts_gin_nofu,,,1,0.7884,1000,
+insert,docs_medium,30000,fts_gin_nofu,,,2,0.7557,1000,
+insert,docs_medium,30000,fts_gin_nofu,,,3,0.7559,1000,
+insert,docs_medium,30000,fts_gin_nofu,,,4,0.7546,1000,
+insert,docs_medium,30000,fts_gin_nofu,,,5,0.8152,1000,
+search,docs_large,300000,none,fts_high,,1,22.512499,29715,Aggregate;Gather;Aggregate;Seq Scan
+search,docs_large,300000,none,fts_high,,2,22.695505,29715,
+search,docs_large,300000,none,fts_high,,3,22.491396,29715,
+search,docs_large,300000,none,fts_high,,4,22.45528,29715,
+search,docs_large,300000,none,fts_high,,5,22.952797,29715,
+search,docs_large,300000,none,fts_mid,,1,23.664679,2849,Aggregate;Gather;Aggregate;Seq Scan
+search,docs_large,300000,none,fts_mid,,2,22.64114,2849,
+search,docs_large,300000,none,fts_mid,,3,22.773096,2849,
+search,docs_large,300000,none,fts_mid,,4,22.648623,2849,
+search,docs_large,300000,none,fts_mid,,5,22.564279,2849,
+search,docs_large,300000,none,fts_low,,1,22.63817,158,Aggregate;Gather;Aggregate;Seq Scan
+search,docs_large,300000,none,fts_low,,2,22.69955,158,
+search,docs_large,300000,none,fts_low,,3,23.094821,158,
+search,docs_large,300000,none,fts_low,,4,22.353589,158,
+search,docs_large,300000,none,fts_low,,5,22.718998,158,
+search,docs_large,300000,none,fts_conj,,1,22.842832,414,Aggregate;Gather;Aggregate;Seq Scan
+search,docs_large,300000,none,fts_conj,,2,22.510213,414,
+search,docs_large,300000,none,fts_conj,,3,22.453367,414,
+search,docs_large,300000,none,fts_conj,,4,23.394226,414,
+search,docs_large,300000,none,fts_conj,,5,22.834725,414,
+search,docs_large,300000,none,fts_phrase,,1,22.581776,25441,Aggregate;Gather;Aggregate;Seq Scan
+search,docs_large,300000,none,fts_phrase,,2,22.435205,25441,
+search,docs_large,300000,none,fts_phrase,,3,22.712802,25441,
+search,docs_large,300000,none,fts_phrase,,4,22.508785,25441,
+search,docs_large,300000,none,fts_phrase,,5,22.594675,25441,
+search,docs_large,300000,none,fts_rank_top10,,1,22.917458,10,Limit;Gather Merge;Sort;Seq Scan
+search,docs_large,300000,none,fts_rank_top10,,2,23.071601,10,
+search,docs_large,300000,none,fts_rank_top10,,3,23.285303,10,
+search,docs_large,300000,none,fts_rank_top10,,4,22.893501,10,
+search,docs_large,300000,none,fts_rank_top10,,5,23.07867,10,
+search,docs_large,300000,none,fts_rum_dist_top10,,1,55.686123,10,Limit;Sort;Seq Scan
+search,docs_large,300000,none,fts_rum_dist_top10,,2,55.619063,10,
+search,docs_large,300000,none,fts_rum_dist_top10,,3,55.113749,10,
+search,docs_large,300000,none,fts_rum_dist_top10,,4,57.601108,10,
+search,docs_large,300000,none,fts_rum_dist_top10,,5,55.736889,10,
+search,docs_large,300000,none,trgm_like_common,,1,0.455396,2545,Aggregate;Gather;Aggregate;Seq Scan
+search,docs_large,300000,none,trgm_like_common,,2,0.451486,2545,
+search,docs_large,300000,none,trgm_like_common,,3,0.457417,2545,
+search,docs_large,300000,none,trgm_like_common,,4,0.460451,2545,
+search,docs_large,300000,none,trgm_like_common,,5,0.471705,2545,
+search,docs_large,300000,none,trgm_like_rare,,1,0.492666,2,Aggregate;Gather;Aggregate;Seq Scan
+search,docs_large,300000,none,trgm_like_rare,,2,0.484614,2,
+search,docs_large,300000,none,trgm_like_rare,,3,0.457037,2,
+search,docs_large,300000,none,trgm_like_rare,,4,0.466737,2,
+search,docs_large,300000,none,trgm_like_rare,,5,0.476877,2,
+search,docs_large,300000,none,trgm_wordsim,,1,19.37302,25991,Aggregate;Gather;Aggregate;Seq Scan
+search,docs_large,300000,none,trgm_wordsim,,2,19.207026,25991,
+search,docs_large,300000,none,trgm_wordsim,,3,19.210636,25991,
+search,docs_large,300000,none,trgm_wordsim,,4,19.418614,25991,
+search,docs_large,300000,none,trgm_wordsim,,5,19.205876,25991,
+search,docs_large,300000,none,trgm_typo_top10,,1,19.181999,10,Limit;Gather Merge;Sort;Seq Scan
+search,docs_large,300000,none,trgm_typo_top10,,2,19.112313,10,
+search,docs_large,300000,none,trgm_typo_top10,,3,19.595022,10,
+search,docs_large,300000,none,trgm_typo_top10,,4,19.253947,10,
+search,docs_large,300000,none,trgm_typo_top10,,5,19.193288,10,
+search,docs_large,300000,none,vec_knn10,,1,0.610856,10,recall@10=1.0000
+search,docs_large,300000,none,vec_knn10,,2,0.609918,10,recall@10=1.0000
+search,docs_large,300000,none,vec_knn10,,3,0.620014,10,recall@10=1.0000
+search,docs_large,300000,none,vec_knn10,,4,0.618027,10,recall@10=1.0000
+search,docs_large,300000,none,vec_knn10,,5,0.610911,10,recall@10=1.0000
+insert,docs_large,300000,none,,,1,0.0876,1000,
+insert,docs_large,300000,none,,,2,0.0651,1000,
+insert,docs_large,300000,none,,,3,0.0691,1000,
+insert,docs_large,300000,none,,,4,0.0488,1000,
+insert,docs_large,300000,none,,,5,0.0541,1000,
+build,docs_large,300000,fts_gin,,,1,42.1632,,108773376
+build,docs_large,300000,fts_gin,,,2,42.1072,,108773376
+size,docs_large,300000,fts_gin,,,1,0,108773376,108773376
+search,docs_large,300000,fts_gin,fts_high,,1,0.179282,29715,Aggregate;Gather;Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_large_fts_gin
+search,docs_large,300000,fts_gin,fts_high,,2,0.087682,29715,
+search,docs_large,300000,fts_gin,fts_high,,3,0.078787,29715,
+search,docs_large,300000,fts_gin,fts_high,,4,0.085225,29715,
+search,docs_large,300000,fts_gin,fts_high,,5,0.188214,29715,
+search,docs_large,300000,fts_gin,fts_mid,,1,0.006494,2849,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_large_fts_gin
+search,docs_large,300000,fts_gin,fts_mid,,2,0.004898,2849,
+search,docs_large,300000,fts_gin,fts_mid,,3,0.004905,2849,
+search,docs_large,300000,fts_gin,fts_mid,,4,0.006032,2849,
+search,docs_large,300000,fts_gin,fts_mid,,5,0.005431,2849,
+search,docs_large,300000,fts_gin,fts_low,,1,0.001085,158,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_large_fts_gin
+search,docs_large,300000,fts_gin,fts_low,,2,0.000793,158,
+search,docs_large,300000,fts_gin,fts_low,,3,0.000722,158,
+search,docs_large,300000,fts_gin,fts_low,,4,0.000893,158,
+search,docs_large,300000,fts_gin,fts_low,,5,0.000835,158,
+search,docs_large,300000,fts_gin,fts_conj,,1,0.002733,414,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_large_fts_gin
+search,docs_large,300000,fts_gin,fts_conj,,2,0.001909,414,
+search,docs_large,300000,fts_gin,fts_conj,,3,0.002089,414,
+search,docs_large,300000,fts_gin,fts_conj,,4,0.002425,414,
+search,docs_large,300000,fts_gin,fts_conj,,5,0.002668,414,
+search,docs_large,300000,fts_gin,fts_phrase,,1,7.383827,25441,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_large_fts_gin
+search,docs_large,300000,fts_gin,fts_phrase,,2,6.916194,25441,
+search,docs_large,300000,fts_gin,fts_phrase,,3,6.889147,25441,
+search,docs_large,300000,fts_gin,fts_phrase,,4,6.920626,25441,
+search,docs_large,300000,fts_gin,fts_phrase,,5,6.837472,25441,
+search,docs_large,300000,fts_gin,fts_rank_top10,,1,1.059274,10,Limit;Sort;Bitmap Heap Scan;Bitmap Index Scan:docs_large_fts_gin
+search,docs_large,300000,fts_gin,fts_rank_top10,,2,1.059348,10,
+search,docs_large,300000,fts_gin,fts_rank_top10,,3,1.096636,10,
+search,docs_large,300000,fts_gin,fts_rank_top10,,4,1.177264,10,
+search,docs_large,300000,fts_gin,fts_rank_top10,,5,1.063468,10,
+insert,docs_large,300000,fts_gin,,,1,0.2827,1000,
+insert,docs_large,300000,fts_gin,,,2,0.2627,1000,
+build,docs_large,300000,fts_gist,,,1,74.6336,,75112448
+build,docs_large,300000,fts_gist,,,2,75.2355,,75005952
+size,docs_large,300000,fts_gist,,,1,0,75005952,75005952
+search,docs_large,300000,fts_gist,fts_high,,1,10.752249,29715,Aggregate;Index Scan:docs_large_fts_gist
+search,docs_large,300000,fts_gist,fts_high,,2,10.658538,29715,
+search,docs_large,300000,fts_gist,fts_high,,3,10.580825,29715,
+search,docs_large,300000,fts_gist,fts_high,,4,10.836979,29715,
+search,docs_large,300000,fts_gist,fts_high,,5,10.661544,29715,
+search,docs_large,300000,fts_gist,fts_mid,,1,2.345377,2849,Aggregate;Index Scan:docs_large_fts_gist
+search,docs_large,300000,fts_gist,fts_mid,,2,2.318227,2849,
+search,docs_large,300000,fts_gist,fts_mid,,3,2.339567,2849,
+search,docs_large,300000,fts_gist,fts_mid,,4,2.34128,2849,
+search,docs_large,300000,fts_gist,fts_mid,,5,2.369674,2849,
+search,docs_large,300000,fts_gist,fts_low,,1,3.103877,158,Aggregate;Index Scan:docs_large_fts_gist
+search,docs_large,300000,fts_gist,fts_low,,2,3.042157,158,
+search,docs_large,300000,fts_gist,fts_low,,3,3.064034,158,
+search,docs_large,300000,fts_gist,fts_low,,4,3.035632,158,
+search,docs_large,300000,fts_gist,fts_low,,5,3.040254,158,
+search,docs_large,300000,fts_gist,fts_conj,,1,0.805387,414,Aggregate;Index Scan:docs_large_fts_gist
+search,docs_large,300000,fts_gist,fts_conj,,2,0.839938,414,
+search,docs_large,300000,fts_gist,fts_conj,,3,0.81293,414,
+search,docs_large,300000,fts_gist,fts_conj,,4,0.82721,414,
+search,docs_large,300000,fts_gist,fts_conj,,5,0.82259,414,
+search,docs_large,300000,fts_gist,fts_phrase,,1,7.279284,25441,Aggregate;Index Scan:docs_large_fts_gist
+search,docs_large,300000,fts_gist,fts_phrase,,2,7.140576,25441,
+search,docs_large,300000,fts_gist,fts_phrase,,3,7.275402,25441,
+search,docs_large,300000,fts_gist,fts_phrase,,4,7.445856,25441,
+search,docs_large,300000,fts_gist,fts_phrase,,5,7.255112,25441,
+search,docs_large,300000,fts_gist,fts_rank_top10,,1,3.364402,10,Limit;Sort;Index Scan:docs_large_fts_gist
+search,docs_large,300000,fts_gist,fts_rank_top10,,2,3.288155,10,
+search,docs_large,300000,fts_gist,fts_rank_top10,,3,3.340656,10,
+search,docs_large,300000,fts_gist,fts_rank_top10,,4,3.384202,10,
+search,docs_large,300000,fts_gist,fts_rank_top10,,5,3.648578,10,
+insert,docs_large,300000,fts_gist,,,1,0.3495,1000,
+insert,docs_large,300000,fts_gist,,,2,0.3002,1000,
+build,docs_large,300000,fts_rum,,,1,112.9494,,181534720
+build,docs_large,300000,fts_rum,,,2,109.2769,,181534720
+size,docs_large,300000,fts_rum,,,1,0,181534720,181534720
+search,docs_large,300000,fts_rum,fts_high,,1,0.06931,29715,Aggregate;Index Scan:docs_large_fts_rum
+search,docs_large,300000,fts_rum,fts_high,,2,0.066185,29715,
+search,docs_large,300000,fts_rum,fts_high,,3,0.070947,29715,
+search,docs_large,300000,fts_rum,fts_high,,4,0.066049,29715,
+search,docs_large,300000,fts_rum,fts_high,,5,0.069355,29715,
+search,docs_large,300000,fts_rum,fts_mid,,1,0.030743,2849,Aggregate;Index Scan:docs_large_fts_rum
+search,docs_large,300000,fts_rum,fts_mid,,2,0.030774,2849,
+search,docs_large,300000,fts_rum,fts_mid,,3,0.029635,2849,
+search,docs_large,300000,fts_rum,fts_mid,,4,0.027826,2849,
+search,docs_large,300000,fts_rum,fts_mid,,5,0.029686,2849,
+search,docs_large,300000,fts_rum,fts_low,,1,0.019452,158,Aggregate;Index Scan:docs_large_fts_rum
+search,docs_large,300000,fts_rum,fts_low,,2,0.021766,158,
+search,docs_large,300000,fts_rum,fts_low,,3,0.019577,158,
+search,docs_large,300000,fts_rum,fts_low,,4,0.021231,158,
+search,docs_large,300000,fts_rum,fts_low,,5,0.023659,158,
+search,docs_large,300000,fts_rum,fts_conj,,1,0.02886,414,Aggregate;Index Scan:docs_large_fts_rum
+search,docs_large,300000,fts_rum,fts_conj,,2,0.025723,414,
+search,docs_large,300000,fts_rum,fts_conj,,3,0.025761,414,
+search,docs_large,300000,fts_rum,fts_conj,,4,0.02812,414,
+search,docs_large,300000,fts_rum,fts_conj,,5,0.023004,414,
+search,docs_large,300000,fts_rum,fts_phrase,,1,0.086441,25441,Aggregate;Index Scan:docs_large_fts_rum
+search,docs_large,300000,fts_rum,fts_phrase,,2,0.084923,25441,
+search,docs_large,300000,fts_rum,fts_phrase,,3,0.10195,25441,
+search,docs_large,300000,fts_rum,fts_phrase,,4,0.090551,25441,
+search,docs_large,300000,fts_rum,fts_phrase,,5,0.094125,25441,
+search,docs_large,300000,fts_rum,fts_rank_top10,,1,1.076759,10,Limit;Sort;Index Scan:docs_large_fts_rum
+search,docs_large,300000,fts_rum,fts_rank_top10,,2,1.082408,10,
+search,docs_large,300000,fts_rum,fts_rank_top10,,3,1.109266,10,
+search,docs_large,300000,fts_rum,fts_rank_top10,,4,1.242706,10,
+search,docs_large,300000,fts_rum,fts_rank_top10,,5,1.107578,10,
+search,docs_large,300000,fts_rum,fts_rum_dist_top10,,1,0.030796,10,Limit;Index Scan:docs_large_fts_rum
+search,docs_large,300000,fts_rum,fts_rum_dist_top10,,2,0.030355,10,
+search,docs_large,300000,fts_rum,fts_rum_dist_top10,,3,0.024287,10,
+search,docs_large,300000,fts_rum,fts_rum_dist_top10,,4,0.0279,10,
+search,docs_large,300000,fts_rum,fts_rum_dist_top10,,5,0.026338,10,
+insert,docs_large,300000,fts_rum,,,1,1.524,1000,
+insert,docs_large,300000,fts_rum,,,2,1.639,1000,
+build,docs_large,300000,vec_hnsw,,,1,166.9164,,614105088
+build,docs_large,300000,vec_hnsw,,,2,160.9151,,614105088
+size,docs_large,300000,vec_hnsw,,,1,0,614105088,614105088
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=10,1,0.001953,10,recall@10=0.8000
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=10,2,0.001356,10,recall@10=0.8000
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=10,3,0.001408,10,recall@10=0.8000
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=10,4,0.001404,10,recall@10=0.8000
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=10,5,0.001259,10,recall@10=0.8000
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=40,1,0.002323,10,recall@10=0.9600
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=40,2,0.002039,10,recall@10=0.9600
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=40,3,0.002039,10,recall@10=0.9600
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=40,4,0.002081,10,recall@10=0.9600
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=40,5,0.002017,10,recall@10=0.9600
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=100,1,0.003137,10,recall@10=0.9950
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=100,2,0.00324,10,recall@10=0.9950
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=100,3,0.003187,10,recall@10=0.9950
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=100,4,0.003249,10,recall@10=0.9950
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=100,5,0.003237,10,recall@10=0.9950
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=200,1,0.004737,10,recall@10=1.0000
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=200,2,0.004689,10,recall@10=1.0000
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=200,3,0.005086,10,recall@10=1.0000
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=200,4,0.004711,10,recall@10=1.0000
+search,docs_large,300000,vec_hnsw,vec_knn10,hnsw.ef_search=200,5,0.004868,10,recall@10=1.0000
+insert,docs_large,300000,vec_hnsw,,,1,4.346,1000,
+insert,docs_large,300000,vec_hnsw,,,2,1.9556,1000,
+build,docs_large,300000,vec_ivfflat,,,1,18.1663,,493010944
+build,docs_large,300000,vec_ivfflat,,,2,18.6948,,493027328
+size,docs_large,300000,vec_ivfflat,,,1,0,493027328,493027328
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=1,1,0.002134,10,recall@10=0.5450
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=1,2,0.001845,10,recall@10=0.5450
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=1,3,0.001884,10,recall@10=0.5450
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=1,4,0.001867,10,recall@10=0.5450
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=1,5,0.001782,10,recall@10=0.5450
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=5,1,0.00536,10,recall@10=0.9200
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=5,2,0.005077,10,recall@10=0.9200
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=5,3,0.005016,10,recall@10=0.9200
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=5,4,0.004913,10,recall@10=0.9200
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=5,5,0.005072,10,recall@10=0.9200
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=10,1,0.009087,10,recall@10=0.9550
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=10,2,0.008364,10,recall@10=0.9550
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=10,3,0.008582,10,recall@10=0.9550
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=10,4,0.008874,10,recall@10=0.9550
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=10,5,0.008973,10,recall@10=0.9550
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=20,1,0.01656,10,recall@10=0.9900
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=20,2,0.016454,10,recall@10=0.9900
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=20,3,0.016062,10,recall@10=0.9900
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=20,4,0.016713,10,recall@10=0.9900
+search,docs_large,300000,vec_ivfflat,vec_knn10,ivfflat.probes=20,5,0.015924,10,recall@10=0.9900
+insert,docs_large,300000,vec_ivfflat,,,1,0.1612,1000,
+insert,docs_large,300000,vec_ivfflat,,,2,0.1198,1000,
+build,docs_large,300000,fts_gin_nofu,,,1,45.5563,,108773376
+build,docs_large,300000,fts_gin_nofu,,,2,44.6276,,108773376
+size,docs_large,300000,fts_gin_nofu,,,1,0,108773376,108773376
+insert,docs_large,300000,fts_gin_nofu,,,1,1.064,1000,
+insert,docs_large,300000,fts_gin_nofu,,,2,0.9385,1000,
+build,docs_large,300000,trgm_gin,,,1,43.7239,,204201984
+size,docs_large,300000,trgm_gin,,,1,0,204201984,204201984
+search,docs_large,300000,trgm_gin,trgm_like_common,,1,0.143533,2545,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_large_trgm_gin
+search,docs_large,300000,trgm_gin,trgm_like_common,,2,0.154258,2545,
+search,docs_large,300000,trgm_gin,trgm_like_common,,3,0.150118,2545,
+search,docs_large,300000,trgm_gin,trgm_like_common,,4,0.141989,2545,
+search,docs_large,300000,trgm_gin,trgm_like_common,,5,0.139951,2545,
+search,docs_large,300000,trgm_gin,trgm_like_rare,,1,0.010319,2,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_large_trgm_gin
+search,docs_large,300000,trgm_gin,trgm_like_rare,,2,0.008246,2,
+search,docs_large,300000,trgm_gin,trgm_like_rare,,3,0.007153,2,
+search,docs_large,300000,trgm_gin,trgm_like_rare,,4,0.00782,2,
+search,docs_large,300000,trgm_gin,trgm_like_rare,,5,0.006423,2,
+search,docs_large,300000,trgm_gin,trgm_wordsim,,1,7.152031,25991,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_large_trgm_gin
+search,docs_large,300000,trgm_gin,trgm_wordsim,,2,6.75101,25991,
+search,docs_large,300000,trgm_gin,trgm_wordsim,,3,6.512233,25991,
+search,docs_large,300000,trgm_gin,trgm_wordsim,,4,6.390137,25991,
+search,docs_large,300000,trgm_gin,trgm_wordsim,,5,6.35915,25991,
+search,docs_large,300000,trgm_gin,trgm_typo_top10,,1,12.162657,10,Limit;Sort;Bitmap Heap Scan;Bitmap Index Scan:docs_large_trgm_gin
+search,docs_large,300000,trgm_gin,trgm_typo_top10,,2,12.79162,10,
+search,docs_large,300000,trgm_gin,trgm_typo_top10,,3,12.196405,10,
+search,docs_large,300000,trgm_gin,trgm_typo_top10,,4,12.227256,10,
+search,docs_large,300000,trgm_gin,trgm_typo_top10,,5,12.168041,10,
+insert,docs_large,300000,trgm_gin,,,1,0.6817,1000,
+build,docs_large,300000,trgm_gist,,,1,87.4555,,1203183616
+size,docs_large,300000,trgm_gist,,,1,0,1203183616,1203183616
+search,docs_large,300000,trgm_gist,trgm_like_common,,1,0.55152,2545,Aggregate;Index Scan:docs_large_trgm_gist
+search,docs_large,300000,trgm_gist,trgm_like_common,,2,0.605683,2545,
+search,docs_large,300000,trgm_gist,trgm_like_common,,3,0.553937,2545,
+search,docs_large,300000,trgm_gist,trgm_like_common,,4,0.569061,2545,
+search,docs_large,300000,trgm_gist,trgm_like_common,,5,0.579404,2545,
+search,docs_large,300000,trgm_gist,trgm_like_rare,,1,0.243515,2,Aggregate;Index Scan:docs_large_trgm_gist
+search,docs_large,300000,trgm_gist,trgm_like_rare,,2,0.240371,2,
+search,docs_large,300000,trgm_gist,trgm_like_rare,,3,0.259684,2,
+search,docs_large,300000,trgm_gist,trgm_like_rare,,4,0.250552,2,
+search,docs_large,300000,trgm_gist,trgm_like_rare,,5,0.246647,2,
+search,docs_large,300000,trgm_gist,trgm_wordsim,,1,11.649382,25991,Aggregate;Bitmap Heap Scan;Bitmap Index Scan:docs_large_trgm_gist
+search,docs_large,300000,trgm_gist,trgm_wordsim,,2,10.22594,25991,
+search,docs_large,300000,trgm_gist,trgm_wordsim,,3,33.858506,25991,
+search,docs_large,300000,trgm_gist,trgm_wordsim,,4,34.275665,25991,
+search,docs_large,300000,trgm_gist,trgm_wordsim,,5,14.471927,25991,
+search,docs_large,300000,trgm_gist,trgm_typo_top10,,1,1.275472,10,Limit;Index Scan:docs_large_trgm_gist
+search,docs_large,300000,trgm_gist,trgm_typo_top10,,2,1.287623,10,
+search,docs_large,300000,trgm_gist,trgm_typo_top10,,3,1.273015,10,
+search,docs_large,300000,trgm_gist,trgm_typo_top10,,4,1.24502,10,
+search,docs_large,300000,trgm_gist,trgm_typo_top10,,5,1.2534,10,
+insert,docs_large,300000,trgm_gist,,,1,0.3204,1000,
+search,docs_small,300,none,vec_knn10,,1,0.001897,10,recall@10=1.0000
+search,docs_small,300,none,vec_knn10,,2,0.0021,10,recall@10=1.0000
+search,docs_small,300,none,vec_knn10,,3,0.002186,10,recall@10=1.0000
+search,docs_small,300,none,vec_knn10,,4,0.00216,10,recall@10=1.0000
+search,docs_small,300,none,vec_knn10,,5,0.001801,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=10,1,0.001207,10,recall@10=0.9750
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=10,2,0.001196,10,recall@10=0.9750
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=10,3,0.00121,10,recall@10=0.9750
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=10,4,0.001162,10,recall@10=0.9750
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=10,5,0.000953,10,recall@10=0.9750
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=40,1,0.001821,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=40,2,0.001672,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=40,3,0.001731,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=40,4,0.001718,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=40,5,0.002067,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=100,1,0.002293,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=100,2,0.002192,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=100,3,0.001996,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=100,4,0.001765,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=100,5,0.001587,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=200,1,0.002278,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=200,2,0.002079,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=200,3,0.002106,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=200,4,0.001887,10,recall@10=1.0000
+search,docs_small,300,vec_hnsw,vec_knn10,hnsw.ef_search=200,5,0.001788,10,recall@10=1.0000
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=1,1,0.001009,10,recall@10=0.4400
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=1,2,0.000998,10,recall@10=0.4400
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=1,3,0.000991,10,recall@10=0.4400
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=1,4,0.001064,10,recall@10=0.4400
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=1,5,0.000972,10,recall@10=0.4400
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=5,1,0.001333,10,recall@10=0.8950
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=5,2,0.001317,10,recall@10=0.8950
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=5,3,0.001005,10,recall@10=0.8950
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=5,4,0.000885,10,recall@10=0.8950
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=5,5,0.000843,10,recall@10=0.8950
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=10,1,0.002001,10,recall@10=1.0000
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=10,2,0.002314,10,recall@10=1.0000
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=10,3,0.002301,10,recall@10=1.0000
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=10,4,0.00218,10,recall@10=1.0000
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=10,5,0.001839,10,recall@10=1.0000
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=20,1,0.001826,10,recall@10=1.0000
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=20,2,0.002197,10,recall@10=1.0000
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=20,3,0.002255,10,recall@10=1.0000
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=20,4,0.002073,10,recall@10=1.0000
+search,docs_small,300,vec_ivfflat,vec_knn10,ivfflat.probes=20,5,0.001862,10,recall@10=1.0000
